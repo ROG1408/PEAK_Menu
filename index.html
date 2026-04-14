@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Custom Expedition Vote</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>CUSTOM EXPEDITION</h1>
+      <p class="subtitle">Progress towards earning Badges is disabled in Custom Expeditions.</p>
+    </header>
+
+    <main>
+      <!-- Expedition -->
+      <section class="panel">
+        <h2>EXPEDITION</h2>
+        <div class="field">
+          <label for="expeditionType">Expedition Type</label>
+          <select id="expeditionType">
+            <option value="CLASSIC">CLASSIC</option>
+            <option value="MINI RUN">MINI RUN</option>
+          </select>
+        </div>
+      </section>
+
+      <!-- Stupid Stuff -->
+      <section class="panel">
+        <h2>STUPID STUFF</h2>
+        <label class="checkbox-row">
+          <input type="checkbox" id="grappleMode">
+          <span>Grapple Mode</span>
+        </label>
+        <label class="checkbox-row">
+          <input type="checkbox" id="kickMode">
+          <span>Kick Mode</span>
+        </label>
+      </section>
+
+      <!-- Gameplay -->
+      <section class="panel">
+        <h2>GAMEPLAY</h2>
+
+        <div class="field">
+          <label for="fogRises">The Fog Rises</label>
+          <select id="fogRises">
+            <option value="ON">ON</option>
+            <option value="OFF">OFF</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="hungerRate">Hunger Rate</label>
+          <select id="hungerRate">
+            <option value="OFF">OFF</option>
+            <option value="LOW">LOW</option>
+            <option value="NORMAL" selected>NORMAL</option>
+            <option value="HIGH">HIGH</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="fallDamage">Fall Damage</label>
+          <select id="fallDamage">
+            <option value="OFF">OFF</option>
+            <option value="LOW">LOW</option>
+            <option value="NORMAL" selected>NORMAL</option>
+            <option value="HIGH">HIGH</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="otherDamage">Other Damage</label>
+          <select id="otherDamage">
+            <option value="OFF">OFF</option>
+            <option value="LOW">LOW</option>
+            <option value="NORMAL" selected>NORMAL</option>
+            <option value="HIGH">HIGH</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="coldAtNight">Cold at Night</label>
+          <select id="coldAtNight">
+            <option value="OFF" selected>OFF</option>
+            <option value="ON">ON</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="itemWeight">Item Weight</label>
+          <select id="itemWeight">
+            <option value="OFF">OFF</option>
+            <option value="NORMAL" selected>NORMAL</option>
+            <option value="HIGH">HIGH</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="flaresAtPeak">Flares at Peak</label>
+          <select id="flaresAtPeak">
+            <option value="ON" selected>ON</option>
+            <option value="OFF">OFF</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="climbingStamina">Climbing Stamina Usage</label>
+          <select id="climbingStamina">
+            <option value="OFF">OFF</option>
+            <option value="LOW">LOW</option>
+            <option value="NORMAL" selected>NORMAL</option>
+            <option value="HIGH">HIGH</option>
+          </select>
+        </div>
+      </section>
+
+      <!-- Spawn Pool -->
+      <section class="panel">
+        <h2>SPAWN POOL</h2>
+        <div class="grid">
+          <!-- Each is a checkbox -->
+          <label class="checkbox-row"><input type="checkbox" id="airlineFood" checked><span>Airline Food</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="antidote" checked><span>Antidote</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="bandages" checked><span>Bandages</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="chainLauncher" checked><span>Chain Launcher</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="piton" checked><span>Piton</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="energyDrink" checked><span>Energy Drink</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="firstAidKit" checked><span>First Aid Kit</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="checkpointFlag" checked><span>Checkpoint Flag</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="flare" checked><span>Flare</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="granolaBar" checked><span>Granola Bar</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="meatPack" checked><span>Meat Pack</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="lantern" checked><span>Lantern</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="bigLollipop" checked><span>Big Lollipop</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="piratesCompass" checked><span>Pirate’s Compass</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="portableStove" checked><span>Portable Stove</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="ropeCannon" checked><span>Rope Cannon</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="ropeSpool" checked><span>Rope Spool</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="scoutCookies" checked><span>Scout Cookies</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="sportsDrink" checked><span>Sports Drink</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="trailMix" checked><span>Trail Mix</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="blowgun" checked><span>Blowgun</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="parasol" checked><span>Parasol</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="rescueClaw" checked><span>Rescue Claw</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="sunscreen" checked><span>Sunscreen</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="balloon" checked><span>Balloon</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="scoutCannon" checked><span>Scout Cannon</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="balloonBunch" checked><span>Balloon Bunch</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="fortifiedMilk" checked><span>Fortified Milk</span></label>
+        </div>
+      </section>
+
+      <!-- Hazards -->
+      <section class="panel">
+        <h2>HAZARDS</h2>
+        <div class="grid">
+          <label class="checkbox-row"><input type="checkbox" id="jellyfish" checked><span>Jellyfish</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="urchins" checked><span>Urchins</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="sporeBombs" checked><span>Spore Bombs</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="bees" checked><span>Bees</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="rain" checked><span>Rain</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="zombies" checked><span>Zombies</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="beetles" checked><span>Beetles</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="spiders" checked><span>Spiders</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="mandrake" checked><span>Mandrake</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="sporeClouds" checked><span>Spore Clouds</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="wind" checked><span>Wind</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="geysers" checked><span>Geysers</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="flashBulbs" checked><span>Flash Bulbs</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="blizzards" checked><span>Blizzards</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="tornadoes" checked><span>Tornadoes</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="cactusThorns" checked><span>Cactus Thorns</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="dynamite" checked><span>Dynamite</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="tumbleweeds" checked><span>Tumbleweeds</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="antlions" checked><span>Antlions</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="blazingSun" checked><span>Blazing Sun</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="scorpions" checked><span>Scorpions</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="lavaRises" checked><span>The Lava Rises</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="scoutmaster" checked><span>The Scoutmaster</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="antiRopeSpool" checked><span>Anti-Rope Spool</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="bugleOfFriendship" checked><span>Bugle of Friendship</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="cureAll" checked><span>Cure-All</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="cursedSkull" checked><span>Cursed Skull</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="faerieLantern" checked><span>Faerie Lantern</span></label>
+
+
+
+          <label class="checkbox-row"><input type="checkbox" id="pandorasLunchbox" checked><span>Pandora’s Lunchbox</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="antiRopeCannon" checked><span>Anti-Rope Cannon</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="scoutEffigy" checked><span>Scout Effigy</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="scoutmastersBugle" checked><span>Scoutmaster’s Bugle</span></label>
+          <label class="checkbox-row"><input type="checkbox" id="bookOfBones" checked><span>The Book of Bones</span></label>
+
+          <!-- Submit button goes here -->
+          <div class="submit-row">
+            <button id="submitBtn">Submit Vote</button>
+            <span id="statusMsg"></span>
+          </div>
+
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
