@@ -10,9 +10,17 @@ function getSelect(id) {
 
 async function submitVote() {
   const status = document.getElementById("statusMsg");
+  const btn = document.getElementById("submitBtn");
+
   status.textContent = "Submitting...";
+  btn.disabled = true;
+  btn.style.opacity = "0.5";
 
   const data = {
+    // NEW FIELDS
+    scoutName: document.getElementById("scoutName").value.trim(),
+    aboutScout: document.getElementById("aboutScout").value.trim(),
+
     expeditionType: getSelect("expeditionType"),
     grappleMode: getCheckbox("grappleMode"),
     kickMode: getCheckbox("kickMode"),
@@ -75,38 +83,3 @@ async function submitVote() {
     antlions: getCheckbox("antlions"),
     blazingSun: getCheckbox("blazingSun"),
     scorpions: getCheckbox("scorpions"),
-    lavaRises: getCheckbox("lavaRises"),
-    scoutmaster: getCheckbox("scoutmaster"),
-    antiRopeSpool: getCheckbox("antiRopeSpool"),
-    bugleOfFriendship: getCheckbox("bugleOfFriendship"),
-    cureAll: getCheckbox("cureAll"),
-    cursedSkull: getCheckbox("cursedSkull"),
-    faerieLantern: getCheckbox("faerieLantern"),
-    pandorasLunchbox: getCheckbox("pandorasLunchbox"),
-    antiRopeCannon: getCheckbox("antiRopeCannon"),
-    scoutEffigy: getCheckbox("scoutEffigy"),
-    scoutmastersBugle: getCheckbox("scoutmastersBugle"),
-    bookOfBones: getCheckbox("bookOfBones")
-  };
-
-  try {
-    const res = await fetch(ENDPOINT_URL, {
-      method: "POST",
-      mode: "no-cors",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(data)
-    });
-
-    // With no-cors we can't read the response, so just assume success
-    status.textContent = "Vote submitted!";
-  } catch (err) {
-    console.error(err);
-    status.textContent = "Error submitting vote.";
-  }
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("submitBtn").addEventListener("click", submitVote);
-});
