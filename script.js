@@ -24,6 +24,8 @@ async function submitVote() {
     expeditionType: getSelect("expeditionType"),
     grappleMode: getCheckbox("grappleMode"),
     kickMode: getCheckbox("kickMode"),
+    scoutName: document.getElementById("scoutName").value.trim(),
+    aboutScout: document.getElementById("aboutScout").value.trim(),
     fogRises: getSelect("fogRises"),
     hungerRate: getSelect("hungerRate"),
     fallDamage: getSelect("fallDamage"),
