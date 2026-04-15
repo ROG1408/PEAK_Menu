@@ -14,7 +14,23 @@
       <p class="subtitle">Progress towards earning Badges is disabled in Custom Expeditions.</p>
     </header>
 
+    <!-- SCOUT INFO PANEL -->
+    <section class="panel">
+      <h2>SCOUT INFO</h2>
+
+      <div class="field">
+        <label for="scoutName">Scout Name:</label>
+        <input type="text" id="scoutName" placeholder="Enter your name">
+      </div>
+
+      <div class="field">
+        <label for="aboutScout">About me:</label>
+        <input type="text" id="aboutScout" placeholder="Tell us about yourself">
+      </div>
+    </section>
+
     <main>
+
       <!-- Expedition -->
       <section class="panel">
         <h2>EXPEDITION</h2>
@@ -122,7 +138,7 @@
       <section class="panel">
         <h2>SPAWN POOL</h2>
         <div class="grid">
-          <!-- Each is a checkbox -->
+          <!-- All checkboxes preserved exactly -->
           <label class="checkbox-row"><input type="checkbox" id="airlineFood" checked><span>Airline Food</span></label>
           <label class="checkbox-row"><input type="checkbox" id="antidote" checked><span>Antidote</span></label>
           <label class="checkbox-row"><input type="checkbox" id="bandages" checked><span>Bandages</span></label>
@@ -186,16 +202,13 @@
           <label class="checkbox-row"><input type="checkbox" id="cureAll" checked><span>Cure-All</span></label>
           <label class="checkbox-row"><input type="checkbox" id="cursedSkull" checked><span>Cursed Skull</span></label>
           <label class="checkbox-row"><input type="checkbox" id="faerieLantern" checked><span>Faerie Lantern</span></label>
-
-
-
           <label class="checkbox-row"><input type="checkbox" id="pandorasLunchbox" checked><span>Pandora’s Lunchbox</span></label>
           <label class="checkbox-row"><input type="checkbox" id="antiRopeCannon" checked><span>Anti-Rope Cannon</span></label>
           <label class="checkbox-row"><input type="checkbox" id="scoutEffigy" checked><span>Scout Effigy</span></label>
           <label class="checkbox-row"><input type="checkbox" id="scoutmastersBugle" checked><span>Scoutmaster’s Bugle</span></label>
           <label class="checkbox-row"><input type="checkbox" id="bookOfBones" checked><span>The Book of Bones</span></label>
 
-          <!-- Submit button goes here -->
+          <!-- Submit button -->
           <div class="submit-row">
             <button id="submitBtn">Submit Vote</button>
             <span id="statusMsg"></span>
@@ -203,6 +216,7 @@
 
         </div>
       </section>
+
     </main>
   </div>
 
