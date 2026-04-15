@@ -10,9 +10,17 @@ function getSelect(id) {
 
 async function submitVote() {
   const status = document.getElementById("statusMsg");
+  const btn = document.getElementById("submitBtn");
+
   status.textContent = "Submitting...";
+  btn.disabled = true;
+  btn.style.opacity = "0.5";
 
   const data = {
+    // NEW FIELDS
+    scoutName: document.getElementById("scoutName").value.trim(),
+    aboutScout: document.getElementById("aboutScout").value.trim(),
+
     expeditionType: getSelect("expeditionType"),
     grappleMode: getCheckbox("grappleMode"),
     kickMode: getCheckbox("kickMode"),
@@ -90,7 +98,7 @@ async function submitVote() {
   };
 
   try {
-    const res = await fetch(ENDPOINT_URL, {
+    await fetch(ENDPOINT_URL, {
       method: "POST",
       mode: "no-cors",
       headers: {
@@ -99,12 +107,17 @@ async function submitVote() {
       body: JSON.stringify(data)
     });
 
-    // With no-cors we can't read the response, so just assume success
     status.textContent = "Vote submitted!";
   } catch (err) {
     console.error(err);
     status.textContent = "Error submitting vote.";
   }
+
+  // Re-enable after 3 seconds (optional)
+  setTimeout(() => {
+    btn.disabled = false;
+    btn.style.opacity = "1";
+  }, 3000);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
